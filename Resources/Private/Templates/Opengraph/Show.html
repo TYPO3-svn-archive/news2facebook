@@ -1,0 +1,28 @@
+HTML Template for news2facebook for the Opengraph Metatags
+See http://developers.facebook.com/docs/opengraph/ for mor information
+
+<f:layout name="default" />
+
+<f:section name="show">
+	<f:if condition="{news2facebook.title}">
+		<meta property="og:title" content="{news2facebook.title}" />
+	</f:if>
+	<f:if condition="{news2facebook.type}">
+		<meta property="og:type" content="{news2facebook.type}" />
+	</f:if>
+	<f:if condition="{news2facebook.url}">
+		<meta property="og:url" content="{news2facebook.url}" />
+	</f:if>
+	<f:if condition="{news2facebook.image}">
+		<meta property="og:image" content="<f:cObject typoscriptObjectPath="plugin.tx_news2facebook.settings.image" data="{news2facebook}" />" />
+	</f:if>
+	<f:if condition="{news2facebook.siteName}">
+		<meta property="og:site_name" content="{news2facebook.siteName}" />
+	</f:if>
+	<f:if condition="{news2facebook.admins}">
+		<meta property="fb:admins" content="{news2facebook.admins}" />
+	</f:if>
+	<f:if condition="{news2facebook.description}">
+		<meta property="og:description" content="{news2facebook.description}" />
+	</f:if>
+</f:section>
